@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+h1.year {
+    background-color: rgba(134, 147, 171, 255);
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, auto);
+        max-width: fit-content;
+    }
+}
+
+/* Large devices (laptops/desktops, 1185px and up) */
+@media only screen and (min-width: 1185px) {
+    .grid {
+        grid-template-columns: repeat(3, auto);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+}
+
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid;
+    margin: 5px;
+    font-weight: normal;
+    text-align: center;
+}
+
+td {
+    height: 30px;
+    width: 50px;
+}
+
+.month-name {
+    background-color: rgba(219,253,205,255);
+    text-align: center;
+    font-weight: bold;
+}
+
+.day-header {
+    background-color: rgba(230,230,230,255);
+}
+
+table > tbody > tr > td:nth-child(6),
+table > tbody > tr > th:nth-child(6) {
+    font-weight: bold;
+    background-color: rgba(254,255,206,255); 
+}
+
+table > tbody > tr > td:nth-child(7),
+table > tbody > tr > th:nth-child(7) {
+    font-weight: bold;
+    background-color: rgba(241,207,155,255);
+}

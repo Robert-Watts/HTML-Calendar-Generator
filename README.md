@@ -6,3 +6,6 @@ To run:
 ```
 python -m calendar_generator <year> <file>
 ```
+
+For help text run:
+python -m calendar_generator --help

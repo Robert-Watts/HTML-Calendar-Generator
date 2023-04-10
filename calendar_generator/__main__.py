@@ -9,15 +9,15 @@ def get_arguments():
     Get the arguments from the command line, validate them and return them.
     """
     parser = ArgumentParser()
+    parser.description = "Generate a HTML calendar for a given year"
+    
     parser.add_argument("year", type=int, help="The year to generate the calendar for")
-
-    # Get the output file name from the arguments
     parser.add_argument("file", type=str, help="The output file name")
 
     args = parser.parse_args()
 
-    if args.year < 1582:
-        raise ValueError("The year must be after 1582")
+    if args.year < 1582 or args.year > 2398:
+        raise ValueError("The year must be after 1582 and before 2399")
 
     return args
 
